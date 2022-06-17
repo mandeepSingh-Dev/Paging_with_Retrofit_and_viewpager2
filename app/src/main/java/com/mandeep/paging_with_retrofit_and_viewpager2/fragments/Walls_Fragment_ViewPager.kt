@@ -1,4 +1,4 @@
-package com.mandeep.paging_with_retrofit_and_viewpager2.viewpager
+package com.mandeep.paging_with_retrofit_and_viewpager2.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,14 +12,13 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mandeep.paging_with_retrofit_and_viewpager2.MVVM.MyViewModel
 import com.mandeep.paging_with_retrofit_and_viewpager2.databinding.FragmentWallBinding
-import com.mandeep.paging_with_retrofit_and_viewpager2.paging.MyPagingDataAdapter
 import com.mandeep.paging_with_retrofit_and_viewpager2.paging.MyPagingDataAdapter_for_ViewPager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class Wall_Fragment : Fragment() {
+class Walls_Fragment_ViewPager : Fragment() {
 
     lateinit var binding:FragmentWallBinding
     val myViewModel: MyViewModel by viewModels()

@@ -1,5 +1,8 @@
 package com.mandeep.paging_with_retrofit_and_viewpager2.retrofit.dataclasses
 
+import android.os.Parcel
+import android.os.Parcelable
+
 data class Hit(
     val collections: Int,
     val comments: Int,
@@ -23,4 +26,47 @@ data class Hit(
     val webformatHeight: Int,
     val webformatURL: String,
     val webformatWidth: Int
-)
+):Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readInt()
+    ) {
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+    }
+
+    companion object CREATOR : Parcelable.Creator<Hit> {
+        override fun createFromParcel(parcel: Parcel): Hit {
+            return Hit(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Hit?> {
+            return arrayOfNulls(size)
+        }
+    }
+}

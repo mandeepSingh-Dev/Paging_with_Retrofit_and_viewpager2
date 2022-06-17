@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".viewpager.Wall_Fragment">
+    tools:context=".fragments.Walls_Fragment_ViewPager">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerr2"
